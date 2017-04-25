@@ -54,7 +54,7 @@ Log into the admin console:
 http://magento2.dev/admin_plastics
 username: magento2
 password: Adm1n1
-````
+```
 
 The initial setup script will take a few minutes. Once the spiner goes away, dismiss the 'Enable Advanced Reporting' modal by clicking 'Remind me later'
 

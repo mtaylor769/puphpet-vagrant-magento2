@@ -10,6 +10,7 @@ Create a directory for your project. This example will use "newsite" as the proj
 ```
   mkdir newsite
   cd newsite
+  git clone git@bitbucket.org:irishtitan/puphpet-vagrant-magento2.git
   vagrant up # this will take a while, get a tasty beverage.
 ```
 

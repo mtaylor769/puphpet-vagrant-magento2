@@ -46,3 +46,34 @@ Confirm Password: Adm1n1
 
 ## Step 6: Install
 Click the `Install` button
+
+## Post-Install:
+Log into the admin console:
+
+```
+http://magento2.dev/admin_plastics
+username: magento2
+password: Adm1n1
+````
+
+The initial setup script will take a few minutes. Once the spiner goes away, dismiss the 'Enable Advanced Reporting' modal by clicking 'Remind me later'
+
+You should be looking at the dashboard page. There will probably be an error message at the top like:
+
+```
+One or more indexers are invalid. Make sure your Magento cron job is running.
+```
+
+To fix this, on the command line in the magento2 directory, type ```php bin/magento indexer:reindex```
+
+Refresh the Dashboard in the browser window. After a few seconds, you should see another error message at the top:
+
+```
+One or more of the Cache Types are invalidated: Page Cache. Please go to Cache Management and refresh cache types.
+```
+
+To fix this, on the command line in the magento2 directory, type ```php bin/magento cache:clean```
+
+## Backend Development
+When making a change to Magento2 backend code, in order to see your changes live, on the command line in the magento2 directory, type ```php bin/magento setup:di:compile``` which will take a few minutes (~15) to complete. Grab a tasty beverage.
+

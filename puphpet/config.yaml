@@ -208,7 +208,7 @@ letsencrypt:
 php:
     install: '1'
     settings:
-        version: '7.0'
+        version: '70'
     modules:
         php:
             - cli
@@ -219,6 +219,7 @@ php:
             - gd
             - mbstring
             - mcrypt
+            - mysqli
             - xml
             - xsl
             - zip
@@ -306,6 +307,7 @@ mariadb:
     databases:
         mariadbnd_6utndksfa87y:
             name: magento2_magento
+            sql: ''
     grants:
         mariadbng_rdx38retv7aw:
             user: magento2
@@ -313,22 +315,22 @@ mariadb:
             privileges:
                 - ALL
 mysql:
-    install: '1'
+    install: '0'
     settings:
         version: '5.7'
         root_password: '123'
         override_options: {  }
     users:
         mysqlnu_u8hquf04jb3w:
-            name: dbuser
+            name: magento2
             password: '123'
     databases:
         mysqlnd_a6atg9b4rhaf:
-            name: dbname
+            name: magento2_magento
             sql: ''
     grants:
         mysqlng_rfhov3fn9j9t:
-            user: dbuser
+            user: magento2
             table: '*.*'
             privileges:
                 - ALL
